@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+@import url(reset.css);
+@import url(font.css);
+
+.centerbox1400 {max-width: 1400px; margin: 0 auto;}
+.centerbox1300 {max-width: 1300px; height: 100%; margin: 0 auto;}
+
+header {}
+header .centerbox1400 {display: flex; justify-content: space-between; padding: 23px 0; }
+header h1 {}
+
+header nav {}
+header nav .gnb {display: flex; height: 50px; }
+header nav .gnb > li {font-size: 18px; height: 100%;  position: relative;}
+header nav .gnb > li > a {padding: 0 35px; display: block; height: 100%; display: flex; align-items: center;}
+header nav .gnb li .lnb {position: absolute; padding: 30px 70px 30px 30px; background: #85dae4; border-radius: 25px 80px 40px 100px ; display: flex; left: 50%; transform: translate(-50%,0) rotate(-10deg); transition: 0.2s; opacity: 0; visibility: hidden; transform-origin: top; box-shadow: 5px 5px 15px rgba(0,0,0,0.1); border: 3px solid #fff;}
+
+header nav .gnb li:hover .lnb {opacity: 1; visibility: visible; transform: translate(-50%,0) rotate(0)}
+
+header nav .gnb li .lnb figure {width: 80px; }
+header nav .gnb li .lnb figure img {width: 100%;}
+header nav .gnb li .lnb ul {white-space: nowrap;}
+header nav .gnb li .lnb ul li {}
+header nav .gnb li .lnb ul li a {padding: 5px 20px; display: block; color: #386c6c;}
+header nav .gnb li .lnb ul li:hover {border-radius: 50px; background: #fbffe2;}
+
+header .spotmenu {height: 50px; display: flex;}
+header .spotmenu a {padding: 0 10px; display: flex; align-items: center; min-width: 24px;}
+header .spotmenu a svg {fill:#555}
+
+#visual {height: 660px; background: #eee;}
+#visual .centerbox1300 {display: flex; height: 100%; align-items: center; justify-content: center; gap: 200px;}
+#visual .centerbox1300 .text {width: 400px; word-break: keep-all;}
+#visual .centerbox1300 .text strong {font-size: 60px; line-height: 1.2;}
+#visual .centerbox1300 .text p {font-size: 22px; line-height: 1.4; margin-top: 30px;}
+#visual .centerbox1300 figure {width: 500px;}
+#visual .centerbox1300 figure svg {stroke-dasharray:15700px; stroke-dashoffset:-15700px; animation:plane 2s forwards}
+@keyframes plane {
+    0% {stroke-dashoffset:-15700px;  stroke:#43BBFF;}
+    100% {stroke-dashoffset:0px; stroke: #149d5b}
+}
+
+#visual .centerbox1300 figure svg .cloud {transform:translateX(-1500px); animation: cloud 2s forwards; opacity: 0;}
+@keyframes cloud {
+    0% {transform:translateX(-1500px); opacity: 0;; }
+    100% {transform:translateX(0px); opacity: 1; }
+}
+
+
+.page_progress {position: fixed; top: 0; left: 0; width: 100%; height: 3px; z-index: 10;}
+.page_progress .bar {position: absolute; width: 0; height: 100%; background: red;}
+
+
+.page_progress2 {position: fixed; width: 18px; height: 200px; left: 50px; top: 50%; transform: translateY(-50%); border-radius: 50px; background: #fff; overflow: hidden; box-shadow: 0 0 20px rgba(0,0,0,0.1);}
+.page_progress2 .bar2 {position: absolute; width: 100%; height: 0%; background: linear-gradient(to top,#0092ff, #0048ff); bottom: 0;;}
+.page_progress2 .bar2:before {content: ""; width: 100%; height: 20px; position: absolute; top: 0; left: 0; background: url('../images/wave.png'); background-repeat: repeat-x; top: -10px; animation: wave 0.5s infinite linear;}
+.page_progress2 .bar2:after {content: ""; width: 100%; height: 20px; position: absolute; top: 0; left: 0; background: url('../images/wave.png'); background-repeat: repeat-x; top: -8px; animation: wave 0.5s infinite linear; opacity: 0.5; animation-delay: 0.25s;}
+
+@keyframes wave {
+    0% {background-position: 0 0;}
+    100% {background-position: -37px 0;}
+}
+
+
+section {padding: 130px 0;}
+
+#section1 .centerbox1300 {position: relative;}
+#section1 .centerbox1300 h2 {position: absolute; font-size: 55px; z-index: 2; font-family: 'TheJamsil1Thin'; font-weight: lighter; width: 330px; word-break: keep-all;}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.mySwiper {width: calc(100% + ((100vw - 100% - 17px) / 2) - 220px); min-height: 200px; margin-left: 220px !important; }
+.mySwiper figure {max-width: 325px;}
+.mySwiper .tit {font-size: 20px; margin-top: 30px; text-align: left;}
+.mySwiper .content {font-size: 18px; margin-top: 10px; text-align: left; font-family: 'TheJamsil2Light'; color: #777;}
+
+#section1 .section1_btns {width: 300px; position: absolute; top: 300px;}
+#section1 .swiper-button-next,
+#section1 .swiper-button-prev {width: 100px; height: 100px; background: #fff; box-shadow: 10px 10px 30px rgba(0,0,0,0.1)}
+#section1 .swiper-button-prev {left: 0px; right: auto}
+#section1 .swiper-button-next {left: 110px; right: auto}
+
+.swiper-button-prev:after {content: url('../images/arrow_prev.jpg') !important;}
+.swiper-button-next:after {content: url('../images/arrow_next.jpg') !important;}
+
+
+
+
+#section2 {padding: 130px 0;}
+#section2 h2 {font-size: 30px; text-align: center; text-transform: uppercase; margin-bottom: 110px;}
+#section2 .content_box {display: flex; gap: 90px;}
+#section2 .content_box .text_box {width: 380px; word-break: keep-all;}
+#section2 .content_box .text_box strong {font-size: 60px; font-weight: lighter; font-family: 'TheJamsil1Thin'; }
+#section2 .content_box .text_box p {font-size: 20px; line-height: 1.4; margin: 30px 0;}
+#section2 .content_box .text_box a {display: inline-block; padding: 15px 60px; background: #000;color: #fff; }
+
+#section2 .content_box .review_box {}
+#section2 .content_box .review_box ul {/* display: flex; flex-wrap: wrap; gap: 45px; justify-content: flex-end; align-items: flex-start; */}
+#section2 .content_box .review_box ul li {background: #eee; padding: 40px; width: 330px; float: right; margin-left: 45px; margin-bottom: 45px; position: relative;}
+#section2 .content_box .review_box ul li:nth-child(2) {top: 230px;} 
+#section2 .content_box .review_box ul li a {}
+#section2 .content_box .review_box ul li a .icon {background: #fff; padding: 5px 15px; display: inline-block; margin-bottom: 30px;}
+#section2 .content_box .review_box ul li a h3 {font-size: 20px; margin-bottom: 20px;}
+#section2 .content_box .review_box ul li a .ex {font-size: 18px; line-height: 1.4; color: #777}
+#section2 .content_box .review_box ul li a figure {width: 120px; height: 120px; float: right;}
+#section2 .content_box .review_box ul li a figure img {width: 100%;}
+
+#section3 {margin: 130px 0; position: relative; padding: 44px 0;}
+#section3:before {content: '';position: absolute;background: #eee;width: 40%;height: 100%;left: 0;top: 0;}
+#section3 .centerbox1300 {display: flex;gap: 90px;}
+#section3 .section3_swiper {width: 787px;height: 615px;position: relative;}
+
+#section3 .text_box {width: 380px; word-break: keep-all;margin-top: 60px;}
+#section3 .text_box strong {font-size: 60px; font-weight: lighter; font-family: 'TheJamsil1Thin'; }
+#section3 .text_box p {font-size: 20px; line-height: 1.4; margin: 30px 0;}
+#section3 .text_box a {display: inline-block; padding: 15px 60px; background: #000;color: #fff; }
+
+#section3 .section3_btns {position: absolute;bottom: 17px; z-index: 1;right: -66px;display: flex;gap: 10px;}
+#section3 .swiper-button-next2,
+#section3 .swiper-button-prev2 {width: 100px; height: 100px; background: #fff; box-shadow: 10px 10px 30px rgba(0,0,0,0.1);cursor: pointer;display: flex;justify-content: center;align-items: center;}
+#section3 .swiper-button-prev2 {left: 0px; right: auto}
+#section3 .swiper-button-next2 {left: 110px; right: auto}
+
+.swiper-button-prev2:after {content: url('../images/arrow_prev.jpg') !important;}
+.swiper-button-next2:after {content: url('../images/arrow_next.jpg') !important;}
+
+
+#section4 .h2_box {margin-bottom: 120px;text-align: center;font-size: 30px;}
+#section4 .content_box {}
+#section4 .content_box ul {display: flex;gap: 50px;}
+#section4 .content_box ul li {background: #eee; padding: 40px; width: 330px; position: relative;}
+#section4 .content_box ul li a {}
+#section4 .content_box ul li a .icon {background: #fff; padding: 5px 15px; display: inline-block; margin-bottom: 30px;position: absolute;}
+#section4 .content_box ul li a h3 {font-size: 20px; margin-bottom: 20px;margin-top: 50px;}
+#section4 .content_box ul li a .ex {font-size: 18px; line-height: 1.4; color: #777}
+#section4 .content_box ul li a figure {width: 120px; height: 120px; float: right;}
+#section4 .content_box ul li a figure img {width: 100%;}
+
+footer {background: #eee;margin-top: 130px;padding: 50px 0;text-align: center;}
+footer h1 {margin-bottom: 30px;}
+footer address {font-style: normal;font-size: 15px;color: #888;}
